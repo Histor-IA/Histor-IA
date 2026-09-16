@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convocatorias | Museo Regional Casa Verde</title>
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Marcellus&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .vigentes-bar,
+    .anteriores-bar {
+      display: block;
+      background: linear-gradient(135deg, #145130, #1f6b40);
+      color: #ffffff;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .vigentes-bar h2,
+    .anteriores-bar h2 {
+      font-family: "Marcellus", serif;
+      font-size: 2.2rem;
+      line-height: 1.2;
+      margin: 0 0 0.7rem;
+      color: #ffffff;
+    }
+
+    .vigentes-bar p {
+      font-family: "Jost", sans-serif;
+      font-size: 1.25rem;
+      line-height: 1.5;
+      margin: 0 auto;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .anteriores-bar h2 {
+      margin-bottom: 0;
+    }
+
+    .convocatorias-page-section {
+      background: #ffffff;
+      padding: 4rem 0;
+    }
+
+    .convocatorias-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 2rem;
+    }
+
+    .conv-card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+      transition: all 0.35s ease;
+    }
+
+    .conv-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+
+    .conv-card h3 {
+      margin-top: 1rem;
+      font-family: "Marcellus", serif;
+      font-size: 1.15rem;
+      line-height: 1.35;
+      color: #1a1a1a;
+      transition: color 0.3s ease;
+    }
+
+    .conv-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .conv-card:hover img {
+      box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+    }
+
+    .conv-card:hover h3 {
+      color: #145130;
+    }
+
+    @media (max-width: 900px) {
+      .convocatorias-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .convocatorias-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="top-brand-bar">
+    <div class="container top-brand-inner">
+      <a href="inicio.html" class="brand-wrap">
+        <img src="Imagenes/logo.png" alt="Logo Museo Regional Casa Verde" class="brand-logo">
+        <span class="brand-title">Museo Regional Casa Verde</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="nav-bar">
+    <div class="container header-container">
+
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-menu">
+        <ul>
+          <li><a href="inicio.html">Inicio</a></li>
+
+          <li class="has-submenu">
+            <a href="#">Historia</a>
+            <ul class="submenu">
+              <li><a href="museo.html">Museo</a></li>
+              <li><a href="patronato.html">Patronato</a></li>
+            </ul>
+          </li>
+
+          <li class="has-submenu">
+            <a href="#">Galería</a>
+            <ul class="submenu submenu-nested-root">
+
+              <li class="has-submenu">
+                <a href="#">Planta Alta</a>
+                <ul class="submenu submenu-nested">
+                  <li><a href="galeria/planta-alta/felipe-matias-velazco.html">Felipe Matías Velazco</a></li>
+                  <li><a href="galeria/planta-alta/arte-contemporaneo.html">Arte contemporáneo</a></li>
+                  <li><a href="galeria/planta-alta/miguel-velez-arceo.html">Miguel Vélez Arceo</a></li>
+                  <li><a href="galeria/planta-alta/fonoteca-elias-melendez-nunez.html">Fonoteca</a></li>
+                </ul>
+              </li>
+
+              <li class="has-submenu">
+                <a href="#">Planta Baja</a>
+                <ul class="submenu submenu-nested">
+                  <li><a href="galeria/planta-baja/arqueologia.html">Arqueología</a></li>
+                  <li><a href="galeria/planta-baja/historia.html">Historia</a></li>
+                  <li><a href="galeria/planta-baja/textil.html">Textil</a></li>
+                  <li><a href="galeria/planta-baja/vainilla-chinanteca.html">Vainilla</a></li>
+                </ul>
+              </li>
+
+            </ul>
+          </li>
+
+          <li><a href="convocatorias.html">Convocatorias</a></li>
+          <li><a href="apoyos-solidarios.html">Apoyos Solidarios</a></li>
+          <li><a href="tour/index.html" target="_blank" rel="noopener noreferrer">Tour</a></li>
+          <li><a href="creditos.html">Créditos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Convocatorias</h1>
+  </div>
+</section>
+
+<section class="vigentes-bar">
+  <div class="container">
+    <h2>Convocatorias vigentes</h2>
+  </div>
+</section>
+
+<section class="vigentes-empty">
+  <div class="container">
+    <p>No hay convocatorias vigentes actualmente</p>
+  </div>
+</section>
+
+<section class="anteriores-bar">
+  <div class="container">
+    <h2>Convocatorias anteriores</h2>
+  </div>
+</section>
+
+<section class="convocatorias-page-section">
+  <div class="container">
+
+    <div class="convocatorias-grid">
+
+      <a class="conv-card" href="Convocatorias/Miguel.html">
+        <img src="Imagenes/Convocatorias/c6.jpg" alt="Premio Miguel Vélez Arceo">
+        <h3>PREMIO Miguel Vélez Arceo A La Tradición Dancística 2025</h3>
+      </a>
+
+      <a class="conv-card" href="Convocatorias/Felipe.html">
+        <img src="Imagenes/Convocatorias/c5.jpg" alt="Premio Felipe Matías Velasco 2025">
+        <h3>PREMIO Felipe Matías Velasco A La Excelencia Artesanal 2025</h3>
+      </a>
+
+      <a class="conv-card" href="Convocatorias/Declamacion.html">
+        <img src="Imagenes/Convocatorias/c4.jpg" alt="Concurso de declamación">
+        <h3>II Concurso De Declamación Infantil Y Juvenil</h3>
+      </a>
+
+      <a class="conv-card" href="Convocatorias/Vida.html">
+        <img src="Imagenes/Convocatorias/c3.jpg" alt="Miguel Vélez Arceo una vida en la danza">
+        <h3>Miguel Vélez Arceo Una Vida En La Danza</h3>
+      </a>
+
+      <a class="conv-card" href="Convocatorias/Artesanal.html">
+        <img src="Imagenes/Convocatorias/c2.jpg" alt="Premio Felipe Matías Velasco 2024">
+        <h3>PREMIO Felipe Matías Velasco A La Excelencia Artesanal 2024</h3>
+      </a>
+
+      <a class="conv-card" href="Convocatorias/Certamen.html">
+        <img src="Imagenes/Convocatorias/c1.jpg" alt="Certamen Fotográfico Museo Regional Casa Verde 2022">
+        <h3>Certamen Fotográfico Museo Regional Casa Verde 2022</h3>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+ <footer class="site-footer">
+    <div class="container footer-container">
+      <div>
+        <h4>Museo Regional Casa Verde</h4>
+        <p>Tuxtepec, Oaxaca</p>
+      </div>
+
+      <div>
+        <h5>Navegación</h5>
+        <ul>
+          <li><a href="inicio.html">Inicio</a></li>
+          <li><a href="museo.html">Museo</a></li>
+          <li><a href="patronato.html">Patronato</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5>Galería</h5>
+        <ul>
+          <li><a href="galeria/planta-baja/arqueologia.html">Planta Baja</a></li>
+          <li><a href="galeria/planta-alta/arte-contemporaneo.html">Planta Alta</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/script.min.js"></script>
+
+</body>
+</html>
